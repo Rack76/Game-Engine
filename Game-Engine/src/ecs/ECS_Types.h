@@ -2,12 +2,12 @@
 
 #define N_COMPONENT_TYPES 1
 
-enum class Component
+enum class ComponentType
 {
 	State = 0
 };
 
-enum class System
+enum class SystemType
 {
 	Phyics = 0
 };

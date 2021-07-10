@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ecs\Component.h" />
     <ClInclude Include="src\ecs\ECS_Types.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
