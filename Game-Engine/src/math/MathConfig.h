@@ -6,12 +6,12 @@
 class MathConfig
 {
 public:
-	void useGLM()
+	static void useGLM()
 	{
 		using namespace glm;
 	}
 
-	void useMyImplementation()
+	static void useMyImplementation()
 	{
 		using namespace Math;
 	}
