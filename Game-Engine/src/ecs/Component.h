@@ -10,7 +10,12 @@ public:
 	ComponentType getType() { return m_ct; }
 
 	friend std::stringstream& operator>>(std::stringstream& stream, Component& component)
-	{}
+	{
+		component.read(stream);
+		return stream;
+	}
+
+	virtual void read(std::stringstream& stream) = 0;
 private:
 	ComponentType m_ct;
 };
