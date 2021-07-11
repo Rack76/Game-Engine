@@ -13,7 +13,10 @@
 std::map<int, std::vector<std::function<void(const SDL_Event&)>>> events;
 
 //quad
+static constexpr engine::render::ColourRGBA s_colourGreen = { 0, 255, 0, 255 };
+static constexpr engine::render::ColourRGBA s_colourBlue = { 0, 0, 255, 255 };
 static engine::render::Position s_quadPosition;
+static engine::render::ColourRGBA s_quadColour = s_colourBlue;
 //
 
 //#todo move events/gameplay out of the framework, this is just for testing
@@ -34,7 +37,8 @@ static void OnMouseEvent(const SDL_Event& sdlEvent)
 	case SDL_MOUSEBUTTONUP:
 	{
 		const SDL_MouseButtonEvent& buttonEvent = sdlEvent.button;
-
+		
+		s_quadColour = buttonEvent.state == SDL_PRESSED ? s_colourGreen : s_colourBlue;
 		break;
 	}
 
@@ -83,7 +87,7 @@ void GameFramework::Run()
 
 		engine::render::SetClearColour({ 255, 0, 0, 255 });
 		engine::render::Clear();
-		engine::render::DrawQuad({ 0, 0, 255, 255 }, s_quadPosition, 100, 100);
+		engine::render::DrawQuad(s_quadColour, s_quadPosition, 100, 100);
 		engine::render::Present();
 	}
 
