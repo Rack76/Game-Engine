@@ -11,7 +11,7 @@ public:
 	BitMask(const Bitset& bits) : bits(bits) {}
 
 	Bitset getMask() const { return bits; }
-	bool bitOn(const Bitset& bit) const { return bits & (1 << bit); }
+	bool getBit(const Bitset& bit) const { return bits & (1 << bit); }
 
 	void setMask(const Bitset& bitset)  { bits = bitset; }
 	void turnBitOn(const Bitset& bit);

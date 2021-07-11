@@ -796,6 +796,7 @@
   <ItemGroup>
     <ClCompile Include="src\engine\ecs\BitMask.cpp" />
     <ClCompile Include="src\engine\ecs\Components\State2D.cpp" />
+    <ClCompile Include="src\engine\ecs\Entity.cpp" />
     <ClCompile Include="src\engine\math\glm\detail\glm.cpp" />
     <ClCompile Include="src\engine\render\renderer.cpp" />
   </ItemGroup>

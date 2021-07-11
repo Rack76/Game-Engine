@@ -4,7 +4,7 @@
 
 enum class ComponentType
 {
-	State = 0
+	State2D = 0
 };
 
 enum class SystemType
