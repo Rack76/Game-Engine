@@ -1521,6 +1521,9 @@
     <ClInclude Include="src\engine\render\renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\events\events.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\math\glm\detail\func_common.inl">

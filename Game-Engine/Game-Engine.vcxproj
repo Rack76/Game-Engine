@@ -29,6 +29,7 @@
     <ClInclude Include="src\engine\ecs\Components\State2D.h" />
     <ClInclude Include="src\engine\ecs\ECS_Types.h" />
     <ClInclude Include="src\engine\ecs\Entity.h" />
+    <ClInclude Include="src\engine\events\events.hpp" />
     <ClInclude Include="src\engine\math\glm\common.hpp" />
     <ClInclude Include="src\engine\math\glm\detail\compute_common.hpp" />
     <ClInclude Include="src\engine\math\glm\detail\compute_vector_relational.hpp" />
@@ -903,7 +904,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir)src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
