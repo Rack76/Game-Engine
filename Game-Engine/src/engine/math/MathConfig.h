@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Math.h"
-#include "glm/glm.hpp"
+#include <glm/glm.hpp>
 
 class MathConfig
 {

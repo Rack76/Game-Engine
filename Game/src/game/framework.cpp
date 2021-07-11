@@ -11,7 +11,6 @@
 #include <SDL_timer.h>
 
 std::map<int, std::vector<std::function<void(const SDL_Event&)>>> events;
-constexpr uint32_t MOUSE_EVENTS = SDL_EventType::SDL_MOUSEBUTTONDOWN | SDL_EventType::SDL_MOUSEBUTTONUP | SDL_EventType::SDL_MOUSEMOTION | SDL_EventType::SDL_MOUSEWHEEL;
 
 //quad
 static engine::render::Position s_quadPosition;
@@ -55,7 +54,10 @@ GameFramework::GameFramework(engine::display::Window& window)
 {
 	engine::render::Init(window);
 
-	events.insert({ MOUSE_EVENTS, {std::bind(&OnMouseEvent, std::placeholders::_1)} });
+	events.insert({ SDL_MOUSEMOTION, {std::bind(&OnMouseEvent, std::placeholders::_1)} });
+	events.insert({ SDL_MOUSEBUTTONDOWN, {std::bind(&OnMouseEvent, std::placeholders::_1)} });
+	events.insert({ SDL_MOUSEBUTTONUP, {std::bind(&OnMouseEvent, std::placeholders::_1)} });
+	events.insert({ SDL_MOUSEWHEEL, {std::bind(&OnMouseEvent, std::placeholders::_1)} });
 }
 
 GameFramework::~GameFramework()
@@ -70,9 +72,9 @@ void GameFramework::Run()
 		SDL_Event sdlEvent;
 		while (SDL_PollEvent(&sdlEvent) != 0)
 		{
-			if (sdlEvent.type & MOUSE_EVENTS)
+			if (events.count(sdlEvent.type))
 			{
-				for (auto& cb : events[MOUSE_EVENTS])
+				for (auto& cb : events[sdlEvent.type])
 				{
 					cb(sdlEvent);
 				}
