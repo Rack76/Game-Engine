@@ -1,8 +1,8 @@
-#include "game/framework.h"
+#include "framework.h"
 
 #include "engine/window/window.h"
 
-int main(int argc, char* argv[])
+int main()
 {
 	engine::display::Window window("game", 1280, 720);
 

@@ -153,10 +153,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\game\framework.h" />
+    <ClInclude Include="src\framework.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\game\framework.cpp" />
+    <ClCompile Include="src\framework.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
