@@ -276,6 +276,7 @@
     <ClInclude Include="src\engine\math\Math.h" />
     <ClInclude Include="src\engine\math\MathConfig.h" />
     <ClInclude Include="src\engine\render\renderer.h" />
+    <ClInclude Include="src\engine\window\window.h" />
     <ClInclude Include="src\math\glm\common.hpp" />
     <ClInclude Include="src\math\glm\detail\compute_common.hpp" />
     <ClInclude Include="src\math\glm\detail\compute_vector_relational.hpp" />
@@ -798,7 +799,8 @@
     <ClCompile Include="src\engine\ecs\Components\State2D.cpp" />
     <ClCompile Include="src\engine\ecs\Entity.cpp" />
     <ClCompile Include="src\engine\math\glm\detail\glm.cpp" />
-    <ClCompile Include="src\engine\render\renderer.cpp" />
+    <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
+    <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

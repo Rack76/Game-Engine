@@ -141,8 +141,8 @@ namespace Internal {
 				for (auto const& callback : callbacks_for_removal) callbacks.erase(callback);
 				callbacks_for_removal.clear();
 
-				/* This will only iterate over the original range of callbacks, whether or not this range changes during iteration */
-				for (auto& callback : callbacks | std::views::take((int)callbacks.size())) callback(std::forward<decltype(_event)>(_event));
+				///* This will only iterate over the original range of callbacks, whether or not this range changes during iteration */
+				for (auto& callback : callbacks /* why is this needed? caused narrowing conversion error | std::views::take((int)callbacks.size())*/) callback(std::forward<decltype(_event)>(_event));
 			}
 
 			~Event_emitter_base() = default;
