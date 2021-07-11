@@ -1,6 +1,6 @@
 #include "BitMask.h"
 
-bool BitMask::matches(const BitMask& mask, const int& relevantBit = 64) const
+bool BitMask::matches(const BitMask& mask, const int& relevantBit) const
 {
 	return ((relevantBit < 64) ? (mask.getMask() & ( 1 << relevantBit)) == (this->bits & (1 << relevantBit)) : mask.getMask() == bits);
 }
