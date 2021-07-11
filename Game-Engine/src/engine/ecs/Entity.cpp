@@ -24,7 +24,7 @@ void EntityManager::addEntity(const BitMask& mask)
 	}
 
 	sysMgr->entityModified(entity, mask);
-	sysMgr->addEvent(entity, (EntityID)EntityEvent::Spawned);
+	sysMgr->addEvent(entity, static_cast<EntityId>(EntityEvent::Spawned));
 }
 
 void EntityManager::addEntity(const std::string& fileStr)
