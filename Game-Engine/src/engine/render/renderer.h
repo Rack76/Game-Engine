@@ -22,8 +22,8 @@ namespace engine
 
 		struct Position
 		{
-			uint16_t m_x;
-			uint16_t m_y;
+			int m_x;
+			int m_y;
 		};
 
 		void Init(display::Window& window);

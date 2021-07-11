@@ -1521,7 +1521,7 @@
     <ClInclude Include="src\engine\render\renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\events\events.hpp">
+    <ClInclude Include="src\engine\events\events.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\window\window.h">
@@ -2353,6 +2353,8 @@
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\engine\ecs\Entity.cpp">
+    <ClCompile Include="src\engine\events\events.cpp">
     <ClCompile Include="src\engine\ecs\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
