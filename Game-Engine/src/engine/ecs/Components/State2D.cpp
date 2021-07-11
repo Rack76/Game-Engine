@@ -1,6 +1,6 @@
 #include "State2D.h"
 
-void State::read(std::stringstream& stream)
+void State2D::read(std::stringstream& stream)
 {
 	stream >> position.x >> position.y;
 }
