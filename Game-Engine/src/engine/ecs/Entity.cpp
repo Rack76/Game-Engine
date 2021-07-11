@@ -77,6 +77,25 @@ bool EntityManager::removeComponent(const EntityId& entity, const ComponentType&
 	auto itr = entityContainer.find(entity);
 	if (itr == entityContainer.end())
 		return false;
+
+	if (!itr->second.first.getBit((unsigned int)componentType))
+		return false;
+
+	auto container = itr->second.second;
+	auto component = std::find_if(container.begin(), container.end(), 
+		[&componentType](Component* c) {return c->getType() == componentType; });
+
+	if (component == container.end())
+		return false;
+
+	delete (*component);
+	container.erase(component);
+
+	itr->second.first.clearBit((unsigned int)componentType);
+
+	sysMgr->entityModified(entity, itr->second.first);
+
+	return true;
 }
 
 bool EntityManager::hasComponent(const EntityId& entity, const ComponentType& componentType)
