@@ -24,7 +24,7 @@ void EntityManager::addEntity(const BitMask& mask)
 	}
 
 	sysMgr->entityModified(entity, mask);
-	sysMgr->addEvent(entity, (EntityID)EntityEvent::Spawned);
+	sysMgr->addEvent(entity, (unsigned int)EntityEvent::Spawned);
 }
 
 void EntityManager::addEntity(const std::string& fileStr)
@@ -48,8 +48,28 @@ bool EntityManager::removeEntity(const EntityId& entity)
 	return true;
 }
 
-void EntityManager::addComponent(const EntityId& entity, const ComponentType& componentType)
+bool EntityManager::addComponent(const EntityId& entity, const ComponentType& componentType)
 {
+	auto itr = entityContainer.find(entity);
+	if (itr == entityContainer.end())
+		return false;
+
+	if (itr->second.first.getBit((unsigned int)componentType))
+		return false;
+
+	auto itr2 = componentFactory.find(componentType);
+
+	if (itr2 == componentFactory.end())
+		return false;
+	
+	Component* c = itr2->second();
+	itr->second.second.push_back(c);
+
+	itr->second.first.turnBitOn((unsigned int)componentType);
+
+	sysMgr->entityModified(entity, itr->second.first);
+
+	return true;
 }
 
 void EntityManager::removeComponent(const EntityId& entity, const ComponentType& componentType)

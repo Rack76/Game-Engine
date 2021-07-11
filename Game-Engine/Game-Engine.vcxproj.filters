@@ -1527,6 +1527,9 @@
     <ClInclude Include="src\engine\window\window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\ecs\SystemManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\math\glm\detail\func_common.inl">

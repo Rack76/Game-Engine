@@ -11,3 +11,13 @@ enum class SystemType
 {
 	Phyics = 0
 };
+
+enum class EntityEvent
+{
+	Spawned = 0
+};
+
+enum class EventID
+{
+
+};

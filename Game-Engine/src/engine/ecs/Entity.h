@@ -7,6 +7,7 @@
 #include "Component.h"
 #include "BitMask.h"
 #include "Components/State2D.h"
+#include "SystemManager.h"
 
 using EntityId = unsigned int;
 
@@ -27,7 +28,7 @@ public:
 
 	bool removeEntity(const EntityId& entity);
 
-	void addComponent(const EntityId& entity, const ComponentType& componentType);
+	bool addComponent(const EntityId& entity, const ComponentType& componentType);
 
 	template<class T>
 	T* getComponent(const EntityId& entity, const ComponentType& componentType)
@@ -39,12 +40,12 @@ public:
 		if (!itr->first.getBit(componentType))
 			return nullptr;
 
-		auto container = itr->second;
-		auto component = std::find_if(container.second.begin(), container.second.end(),
+		auto container = itr->second.second;
+		auto component = std::find_if(container->begin(), container->end(),
 			[&componentType](Component* c)
-			{return c->getType() == componentType; })
+			{return c->getType() == componentType; });
 
-		return component == container.end() ? nullptr : static_cast<T*>(*container);
+		return (component == container.end() ? nullptr : dynamic_cast<T*>(*component));
 	}
 
 	void removeComponent(const EntityId& entity, const ComponentType& componentType);
@@ -57,7 +58,7 @@ private:
 	template <class T>
 	void addComponentType(const ComponentType& id)
 	{
-		componentFactory[id] = []() Component * -> {return new T(); };
+		componentFactory[id] = []() -> Component* {return new T(); };
 	}
 
 	SystemManager* sysMgr;

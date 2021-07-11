@@ -6,9 +6,10 @@
 
 using namespace glm;
 
-class State2D : Component
+class State2D : public Component
 {
-	State2D() : position(vec2(0, 0)), Component(ComponentType::State)
+public:
+	State2D() : position(vec2(0, 0)), Component(ComponentType::State2D)
 	{}
 
 	void read(std::stringstream& stream);
