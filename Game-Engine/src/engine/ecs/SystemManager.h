@@ -10,4 +10,6 @@ public:
 	void addEvent(unsigned int entity, unsigned int event);
 
 	void removeEntity(unsigned int entity);
+
+	void purgeEntities();
 };

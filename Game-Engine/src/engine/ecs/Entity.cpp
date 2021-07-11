@@ -100,9 +100,25 @@ bool EntityManager::removeComponent(const EntityId& entity, const ComponentType&
 
 bool EntityManager::hasComponent(const EntityId& entity, const ComponentType& componentType)
 {
-	return false;
+	auto itr = entityContainer.find(entity);
+	if (itr == entityContainer.end())
+		return false;
+
+	auto bitmask = itr->second.first;
+	return bitmask.getBit((unsigned int)componentType);
 }
 
 void EntityManager::purge()
 {
+	sysMgr->purgeEntities();
+	for (auto entity : entityContainer)
+	{
+		for (auto component : entity.second.second)
+		{
+			delete component;
+		}
+		entity.second.second.clear();
+		entity.second.first.clear();
+	}
+	entityContainer.clear();
 }
