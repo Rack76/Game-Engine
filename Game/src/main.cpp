@@ -1,5 +1,4 @@
 #include "framework.h"
-
 #include "engine/window/window.h"
 
 int main()
