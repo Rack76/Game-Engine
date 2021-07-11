@@ -72,8 +72,11 @@ bool EntityManager::addComponent(const EntityId& entity, const ComponentType& co
 	return true;
 }
 
-void EntityManager::removeComponent(const EntityId& entity, const ComponentType& componentType)
+bool EntityManager::removeComponent(const EntityId& entity, const ComponentType& componentType)
 {
+	auto itr = entityContainer.find(entity);
+	if (itr == entityContainer.end())
+		return false;
 }
 
 bool EntityManager::hasComponent(const EntityId& entity, const ComponentType& componentType)
