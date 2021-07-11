@@ -19,9 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\ecs\BitMask.h" />
     <ClInclude Include="src\ecs\Component.h" />
-    <ClInclude Include="src\ecs\Components\State.h" />
+    <ClInclude Include="src\ecs\Components\State2D.h" />
     <ClInclude Include="src\ecs\ECS_Types.h" />
+    <ClInclude Include="src\ecs\Entity.h" />
     <ClInclude Include="src\math\glm\common.hpp" />
     <ClInclude Include="src\math\glm\detail\compute_common.hpp" />
     <ClInclude Include="src\math\glm\detail\compute_vector_relational.hpp" />
@@ -408,6 +410,8 @@
     <None Include="src\math\glm\gtx\wrap.inl" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ecs\BitMask.cpp" />
+    <ClCompile Include="src\ecs\Components\State2D.cpp" />
     <ClCompile Include="src\math\glm\detail\glm.cpp" />
   </ItemGroup>
   <ItemGroup>

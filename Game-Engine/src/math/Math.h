@@ -4,11 +4,17 @@ namespace Math
 {
 	class vec2
 	{
-		vec2(int x, int y) : m_x(x), m_y(y)
+	public:
+		vec2(float x, float y) : x(x), y(y)
 		{}
-		int getX() { return m_x; }
-		int getY() { return m_y; }
-	private:
-		int m_x, m_y;
+		float x, y;
+	};
+
+	class vec3
+	{
+	public:
+		vec3(float x, float y, float z) : x(x), y(y), z(z)
+		{}
+		float x, y, z;
 	};
 }

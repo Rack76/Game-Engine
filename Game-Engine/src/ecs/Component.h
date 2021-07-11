@@ -16,6 +16,6 @@ public:
 	}
 
 	virtual void read(std::stringstream& stream) = 0;
-private:
+protected:
 	ComponentType m_ct;
 };
