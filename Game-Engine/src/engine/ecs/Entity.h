@@ -48,7 +48,7 @@ public:
 		return (component == container.end() ? nullptr : dynamic_cast<T*>(*component));
 	}
 
-	void removeComponent(const EntityId& entity, const ComponentType& componentType);
+	bool removeComponent(const EntityId& entity, const ComponentType& componentType);
 
 	bool hasComponent(const EntityId& entity, const ComponentType& componentType);
 
