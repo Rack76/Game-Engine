@@ -4,6 +4,9 @@
 #include "game/framework.h"
 #include "engine/events/events.hpp"
 
+#include "engine/window/window.h"
+#include "engine/render/renderer.h"
+
 struct X : Event_emitter<int, double> {
 	void emit() {
 		post_event(5);
@@ -13,13 +16,8 @@ struct X : Event_emitter<int, double> {
 
 int main(int argc, char* argv[])
 {
-	GameFramework framework;
+	engine::display::Window window("game", 1280, 720);
 
-
-	X x;
-	auto h1 = x.add_callback([](int) -> void { std::cout << "Received int event\n"; });
-	auto h2 = x.add_callback([](double) { std::cout << "Received double event\n"; });
-
-	x.emit();
-
+	GameFramework framework(window);
+	framework.Run();
 }

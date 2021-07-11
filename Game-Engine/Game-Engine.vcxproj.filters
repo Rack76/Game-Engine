@@ -1524,6 +1524,9 @@
     <ClInclude Include="src\engine\events\events.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\window\window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="src\math\glm\detail\func_common.inl">
@@ -2341,7 +2344,10 @@
     <ClCompile Include="src\engine\math\glm\detail\glm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine\render\renderer.cpp">
+    <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\window\sdl\window-sdl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
