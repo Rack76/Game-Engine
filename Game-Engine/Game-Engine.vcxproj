@@ -29,7 +29,6 @@
     <ClInclude Include="src\engine\ecs\Components\State2D.h" />
     <ClInclude Include="src\engine\ecs\ECS_Types.h" />
     <ClInclude Include="src\engine\ecs\Entity.h" />
-    <ClInclude Include="src\engine\events\events.hpp" />
     <ClInclude Include="src\engine\events\events.h" />
     <ClInclude Include="src\engine\math\glm\common.hpp" />
     <ClInclude Include="src\engine\math\glm\detail\compute_common.hpp" />
@@ -799,6 +798,7 @@
     <ClCompile Include="src\engine\ecs\BitMask.cpp" />
     <ClCompile Include="src\engine\ecs\Components\State2D.cpp" />
     <ClCompile Include="src\engine\ecs\Entity.cpp" />
+    <ClCompile Include="src\engine\events\events.cpp" />
     <ClCompile Include="src\engine\math\glm\detail\glm.cpp" />
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
@@ -925,7 +925,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir)src\</AdditionalIncludeDirectories>
