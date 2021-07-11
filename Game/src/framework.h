@@ -5,7 +5,7 @@
 #include <functional>
 
 class Game;
-union SDL_Event;
+union SDL_Event; //#todo sdl events still need wrapping
 
 namespace engine
 {
