@@ -1,13 +1,19 @@
 #include "System.h"
 
-System::System(SystemManager* sysMgr, const SystemType& systemType)
+System::System(SystemManager* sysMgr, const SystemType& systemType) : sysMgr(sysMgr), sysType(systemType)
 {
 
 }
 
+System::~System()
+{
+	purge();
+}
+
 bool System::addEntity(const EntityId& entity)
 {
-	return false;
+
+	return true;
 }
 
 bool System::hasEntity(const EntityId& entity)

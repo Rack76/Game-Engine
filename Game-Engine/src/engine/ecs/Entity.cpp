@@ -38,7 +38,7 @@ int EntityManager::addEntity(const std::string& fileStr)
 	TCHAR directory[500];
 	GetCurrentDirectory(500, directory);
 	std::string directoryName((char*)directory);
-	file.open(directoryName + "entities/" + "fileStr");
+	file.open(directoryName + "entities/" + fileStr + ".txt");
 
 	if (!file.is_open())
 	{

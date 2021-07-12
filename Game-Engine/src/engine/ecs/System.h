@@ -11,6 +11,7 @@ using Requirements = std::vector<BitMask>;
 class System
 {
 	System(SystemManager* sysMgr, const SystemType& systemType);
+	~System();
 
 	bool addEntity(const EntityId& entity);
 	bool hasEntity(const EntityId& entity);
