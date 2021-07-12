@@ -21,6 +21,8 @@
     <ClInclude Include="src\engine\ecs\Components\State2D.h" />
     <ClInclude Include="src\engine\ecs\ECS_Types.h" />
     <ClInclude Include="src\engine\ecs\Entity.h" />
+    <ClInclude Include="src\engine\ecs\Event.h" />
+    <ClInclude Include="src\engine\ecs\System.h" />
     <ClInclude Include="src\engine\ecs\SystemManager.h" />
     <ClInclude Include="src\engine\events\events.h" />
     <ClInclude Include="src\engine\math\Math.h" />
@@ -33,6 +35,8 @@
     <ClCompile Include="src\engine\ecs\BitMask.cpp" />
     <ClCompile Include="src\engine\ecs\Components\State2D.cpp" />
     <ClCompile Include="src\engine\ecs\Entity.cpp" />
+    <ClCompile Include="src\engine\ecs\Event.cpp" />
+    <ClCompile Include="src\engine\ecs\System.cpp" />
     <ClCompile Include="src\engine\events\events.cpp" />
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />

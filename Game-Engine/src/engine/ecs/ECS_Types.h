@@ -16,8 +16,3 @@ enum class EntityEvent
 {
 	Spawned = 0
 };
-
-enum class EventID
-{
-
-};
