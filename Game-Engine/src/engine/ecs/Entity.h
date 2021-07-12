@@ -4,6 +4,9 @@
 #include <map>
 #include <unordered_map>
 #include <functional>
+#include <fstream>
+#include <windows.h>
+#include <iostream>
 #include "Component.h"
 #include "BitMask.h"
 #include "Components/State2D.h"
@@ -14,6 +17,7 @@ using EntityId = unsigned int;
 using ComponentContainer = std::vector<Component*>;
 using EntityData = std::pair<BitMask, ComponentContainer>;
 using EntityContainer = std::unordered_map<EntityId, EntityData>;
+using ComponentsAttribInit = std::vector<std::function<void(ComponentType)>>;
 
 using ComponentFactory = std::unordered_map<ComponentType, std::function<Component* (void)>>;
 
@@ -23,8 +27,8 @@ public:
 	EntityManager(SystemManager* sysMgr);
 	~EntityManager();
 
-	void addEntity(const BitMask& mask);
-	void addEntity(const std::string& fileStr);
+	int addEntity(const BitMask& mask);
+	int addEntity(const std::string& fileStr);
 
 	bool removeEntity(const EntityId& entity);
 
@@ -37,11 +41,11 @@ public:
 		if (itr == entityContainer.end())
 			return nullptr;
 
-		if (!itr->first.getBit(componentType))
+		if (!itr->second.first.getBit((unsigned int)componentType))
 			return nullptr;
 
 		auto container = itr->second.second;
-		auto component = std::find_if(container->begin(), container->end(),
+		auto component = std::find_if(container.begin(), container.end(),
 			[&componentType](Component* c)
 			{return c->getType() == componentType; });
 
@@ -52,6 +56,8 @@ public:
 
 	bool hasComponent(const EntityId& entity, const ComponentType& componentType);
 
+	void addComponentAttribInit(std::function<void(ComponentType)> func);
+
 	void purge();
 
 private:
@@ -61,6 +67,7 @@ private:
 		componentFactory[id] = []() -> Component* {return new T(); };
 	}
 
+	ComponentsAttribInit cAtrbInit;
 	SystemManager* sysMgr;
 	EntityContainer entityContainer;
 	ComponentFactory componentFactory;
