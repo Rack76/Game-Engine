@@ -10,6 +10,7 @@
     <ClCompile Include="src\engine\ecs\Event.cpp" />
     <ClCompile Include="src\engine\ecs\System.cpp" />
     <ClCompile Include="src\engine\engine.cpp" />
+    <ClCompile Include="src\engine\eventloop_sdl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ecs\BitMask.h" />
@@ -33,6 +34,7 @@
     <ClInclude Include="src\engine\ecs\System.h" />
     <ClInclude Include="src\engine\engine.h" />
     <ClInclude Include="src\engine\events.h" />
+    <ClInclude Include="src\engine\eventloop_sdl.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
