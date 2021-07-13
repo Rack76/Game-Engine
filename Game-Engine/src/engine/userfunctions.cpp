@@ -23,7 +23,7 @@ namespace ge::userFunctions {
 			}
 		}
 	}
-	void addFunction(int order, void(*func)(void)) {
+	void addFunction(void(*func)(void), int order) {
 		toAdd.push_back({ order, func });
 	}
 	void sendAll() {

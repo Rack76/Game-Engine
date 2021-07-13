@@ -1,6 +1,6 @@
 #include "engine.h"
 #include "events.h"
-#include "eventloop_sdl.h"
+#include "eventloop.h"
 #include "userfunctions.h"
 
 namespace ge::engine {

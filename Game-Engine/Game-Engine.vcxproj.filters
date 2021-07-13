@@ -10,7 +10,7 @@
     <ClCompile Include="src\engine\ecs\Event.cpp" />
     <ClCompile Include="src\engine\ecs\System.cpp" />
     <ClCompile Include="src\engine\engine.cpp" />
-    <ClCompile Include="src\engine\eventloop_sdl.cpp" />
+    <ClCompile Include="src\engine\eventloop.cpp" />
     <ClCompile Include="src\engine\userfunctions.cpp" />
     <ClCompile Include="src\ph\game.cpp" />
   </ItemGroup>
@@ -36,7 +36,7 @@
     <ClInclude Include="src\engine\ecs\System.h" />
     <ClInclude Include="src\engine\engine.h" />
     <ClInclude Include="src\engine\events.h" />
-    <ClInclude Include="src\engine\eventloop_sdl.h" />
+    <ClInclude Include="src\engine\eventloop.h" />
     <ClInclude Include="src\engine\userfunctions.h" />
     <ClInclude Include="src\ph\game.h" />
   </ItemGroup>
