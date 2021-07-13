@@ -9,8 +9,8 @@ namespace ge {
 				funcs.push_back(func);
 			}
 			void send(Parameters... p) {
-				const int size = funcs.size();
-				for (int i = 0; i < size; i++) {
+				const size_t size = funcs.size();
+				for (size_t i = 0; i < size; i++) {
 					funcs[i](p...);
 				}
 			}
@@ -23,8 +23,8 @@ namespace ge {
 				funcs.push_back(func);
 			}
 			void send() {
-				const int size = funcs.size();
-				for (int i = 0; i < size; i++) {
+				const size_t size = funcs.size();
+				for (size_t i = 0; i < size; i++) {
 					funcs[i]();
 				}
 			}

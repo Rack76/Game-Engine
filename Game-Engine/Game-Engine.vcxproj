@@ -31,6 +31,7 @@
     <ClInclude Include="src\engine\math\Math.h" />
     <ClInclude Include="src\engine\math\MathConfig.h" />
     <ClInclude Include="src\engine\render\renderer.h" />
+    <ClInclude Include="src\engine\userfunctions.h" />
     <ClInclude Include="src\engine\window\window.h" />
     <ClInclude Include="src\render\renderer.h" />
   </ItemGroup>
@@ -44,6 +45,7 @@
     <ClCompile Include="src\engine\eventloop_sdl.cpp" />
     <ClCompile Include="src\engine\events\events.cpp" />
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
+    <ClCompile Include="src\engine\userfunctions.cpp" />
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
   </ItemGroup>
   <ItemGroup>
