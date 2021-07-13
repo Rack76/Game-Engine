@@ -8,8 +8,10 @@ namespace ge {
 				
 				first = 1,
 				beforeInput = 2,
+				//usercode input will be called here
 				afterInput = 3,
 				beforeUser = 4,
+				//usercode functions will be called here
 				afterUser = 5,
 				last = 6,
 

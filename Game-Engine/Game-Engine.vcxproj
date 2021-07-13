@@ -33,6 +33,7 @@
     <ClInclude Include="src\engine\render\renderer.h" />
     <ClInclude Include="src\engine\userfunctions.h" />
     <ClInclude Include="src\engine\window\window.h" />
+    <ClInclude Include="src\ph\game.h" />
     <ClInclude Include="src\render\renderer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +48,7 @@
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
     <ClCompile Include="src\engine\userfunctions.cpp" />
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
+    <ClCompile Include="src\ph\game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
