@@ -40,8 +40,13 @@ bool System::removeEntity(const EntityId& entity)
 
 bool System::fitsRequirement(const BitMask& bits)
 {
-	return std::find_if(requiredComponents.begin(), requiredComponents.end(), 
-		[&bits](const BitMask& m_bits) {return bits.getMask() == m_bits.getMask(); }) != requiredComponents.end();
+	return std::find_if(requiredEntityTypes.begin(), requiredEntityTypes.end(),
+		[&bits](const BitMask& m_bits) {return bits.getMask() == m_bits.getMask(); }) != requiredEntityTypes.end();
+}
+
+void System::addRequiredEntityTypes(const BitMask& mask)
+{
+	requiredEntityTypes.push_back(mask);
 }
 
 void System::purge()

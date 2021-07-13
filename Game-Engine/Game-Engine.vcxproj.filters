@@ -12,6 +12,7 @@
     <ClCompile Include="src\engine\ecs\Communicator.cpp" />
     <ClCompile Include="src\engine\ecs\MessageHandler.cpp" />
     <ClCompile Include="src\engine\ecs\SystemManager.cpp" />
+    <ClCompile Include="src\engine\render\window\WindowGLFW_OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ecs\BitMask.h" />
@@ -37,6 +38,12 @@
     <ClInclude Include="src\engine\ecs\Message.h" />
     <ClInclude Include="src\engine\ecs\Communicator.h" />
     <ClInclude Include="src\engine\ecs\MessageHandler.h" />
+    <ClInclude Include="src\engine\render\Renderer3D.h" />
+    <ClInclude Include="src\engine\render\window\Window.h" />
+    <ClInclude Include="src\engine\render\NewRenderer.h" />
+    <ClInclude Include="src\engine\render\window\WindowGLFW_OpenGL.h" />
+    <ClInclude Include="src\engine\render\window\WindowGLFW.h" />
+    <ClInclude Include="src\engine\render\RendererOpenGL.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,6 +3,8 @@
 #include "Math.h"
 #include <glm/glm.hpp>
 
+using namespace glm;
+
 class MathConfig
 {
 public:

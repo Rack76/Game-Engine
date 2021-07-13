@@ -2,10 +2,11 @@
 
 #include <unordered_map>
 #include "BitMask.h"
-#include "System.h"
 #include "Event.h"
 #include "MessageHandler.h"
 #include "Entity.h"
+
+class System;
 
 using SystemContainer = std::unordered_map<SystemType, System*>;
 using EntityEventContainer = std::unordered_map<EntityId, EventQueue>;
@@ -21,6 +22,10 @@ public:
 	void addEvent(const EntityId& entityId, const EventID& event);
 	void removeEntity(unsigned int entity);
 	void purgeEntities();
+	EntityManager* getEntityMgr()
+	{
+		return entityMgr;
+	}
 
 	template <class T>
 	T* getSystem(const SystemType& sysType)

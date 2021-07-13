@@ -31,7 +31,13 @@
     <ClInclude Include="src\engine\events\events.h" />
     <ClInclude Include="src\engine\math\Math.h" />
     <ClInclude Include="src\engine\math\MathConfig.h" />
+    <ClInclude Include="src\engine\render\NewRenderer.h" />
     <ClInclude Include="src\engine\render\renderer.h" />
+    <ClInclude Include="src\engine\render\Renderer3D.h" />
+    <ClInclude Include="src\engine\render\RendererOpenGL.h" />
+    <ClInclude Include="src\engine\render\window\Window.h" />
+    <ClInclude Include="src\engine\render\window\WindowGLFW.h" />
+    <ClInclude Include="src\engine\render\window\WindowGLFW_OpenGL.h" />
     <ClInclude Include="src\engine\window\window.h" />
     <ClInclude Include="src\render\renderer.h" />
   </ItemGroup>
@@ -46,6 +52,7 @@
     <ClCompile Include="src\engine\ecs\SystemManager.cpp" />
     <ClCompile Include="src\engine\events\events.cpp" />
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
+    <ClCompile Include="src\engine\render\window\WindowGLFW_OpenGL.cpp" />
     <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
   </ItemGroup>
   <ItemGroup>

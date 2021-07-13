@@ -1,4 +1,5 @@
 #include "SystemManager.h"
+#include "System.h"
 
 SystemManager::SystemManager() : entityMgr(nullptr)
 {
