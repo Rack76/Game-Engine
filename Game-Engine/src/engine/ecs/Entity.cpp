@@ -1,8 +1,8 @@
 #include "Entity.h"
+#include "SystemManager.h"
 
 EntityManager::EntityManager(SystemManager* sysMgr) : sysMgr(sysMgr), counter(0)
 {
-	componentFactory.reserve(N_COMPONENT_TYPES);
 	addComponentType<State2D>(ComponentType::State2D);
 }
 

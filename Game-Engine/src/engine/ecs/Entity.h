@@ -10,7 +10,8 @@
 #include "Component.h"
 #include "BitMask.h"
 #include "Components/State2D.h"
-#include "SystemManager.h"
+
+class SystemManager;
 
 using EntityId = unsigned int;
 

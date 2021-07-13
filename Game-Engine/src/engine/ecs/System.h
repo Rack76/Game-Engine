@@ -1,15 +1,19 @@
 #pragma once
 
 #include <vector>
-#include "SystemManager.h"
 #include "ECS_Types.h"
+#include "Observer.h"
+#include "BitMask.h"
+
+class SystemManager;
 
 using EntityId = unsigned int;
 using EntityList = std::vector<EntityId>;
 using Requirements = std::vector<BitMask>;
 
-class System
+class System : public Observer
 {
+public:
 	System(SystemManager* sysMgr, const SystemType& systemType);
 	~System();
 
