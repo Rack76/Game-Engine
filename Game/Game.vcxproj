@@ -87,15 +87,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\framework.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\game\game.h" />
-    <ClInclude Include="src\game\scene\scene.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\framework.cpp" />
-    <ClCompile Include="src\game\game.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -32,6 +32,7 @@
     <ClInclude Include="src\engine\ecs\Event.h" />
     <ClInclude Include="src\engine\ecs\System.h" />
     <ClInclude Include="src\engine\engine.h" />
+    <ClInclude Include="src\engine\events.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
