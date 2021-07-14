@@ -7,10 +7,14 @@
     <ClInclude Include="window.hpp" />
     <ClInclude Include="renderer_2d.hpp" />
     <ClInclude Include="types.hpp" />
+    <ClInclude Include="event_emitter.hpp" />
+    <ClInclude Include="event_processor.hpp" />
+    <ClInclude Include="events.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="window.cpp" />
     <ClCompile Include="renderer_2d.cpp" />
     <ClCompile Include="types.cpp" />
+    <ClCompile Include="event_processor.cpp" />
   </ItemGroup>
 </Project>

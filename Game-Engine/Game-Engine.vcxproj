@@ -14,11 +14,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="events.hpp" />
+    <ClInclude Include="event_emitter.hpp" />
+    <ClInclude Include="event_processor.hpp" />
     <ClInclude Include="renderer_2d.hpp" />
     <ClInclude Include="types.hpp" />
     <ClInclude Include="window.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="event_processor.cpp" />
     <ClCompile Include="renderer_2d.cpp" />
     <ClCompile Include="types.cpp" />
     <ClCompile Include="window.cpp" />
