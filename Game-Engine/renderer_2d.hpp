@@ -13,13 +13,15 @@ namespace Engine {
 			/* More in the future */
 		};
 
-		template<Primitive>
-		void render(auto&&...) = delete;
+		template<Primitive _primitive> requires (_primitive == Primitive::quad)
+		void render(Quad const& _quad, Colour const& _colour) {
+			SDL_SetRenderDrawColor(*this, _colour.r, _colour.g, _colour.b, _colour.a);
+			SDL_Rect rect(_quad.x, _quad.y, _quad.width, _quad.height);
+			SDL_RenderFillRect(*this, &rect);	
+		}
+		
 
-		template<>
-		void render<Primitive::quad>(Quad const& _quad, Colour const& _colour);
-
-		void clear(Colour const& _colour = {});
+		void clear(Colour const& _colour);
 		void render_present();
 
 		operator SDL_Renderer* () const noexcept;
