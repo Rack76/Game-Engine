@@ -8,10 +8,11 @@
 namespace Engine {
 	class Window {
 	public:
+		operator SDL_Window* () const noexcept;
+
 		/* Cannot take a string view because it might not be null-terminated. */
 		/* We could add a char const* overload but I really doubt it matters */
 		Window(std::string const& _title, unsigned _width, unsigned _height);
-
 		~Window() = default;
 
 		Window(Window const&) = delete;

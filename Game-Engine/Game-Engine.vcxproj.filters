@@ -5,8 +5,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="window.hpp" />
+    <ClInclude Include="renderer_2d.hpp" />
+    <ClInclude Include="types.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="window.cpp" />
+    <ClCompile Include="renderer_2d.cpp" />
+    <ClCompile Include="types.cpp" />
   </ItemGroup>
 </Project>
