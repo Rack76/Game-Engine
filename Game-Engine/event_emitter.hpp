@@ -147,7 +147,7 @@ namespace Engine {
 				//for (auto& callback : callbacks | std::views::take(std::ssize(callbacks))) callback(std::forward<decltype(_event)>(_event));
 				/* For whatever reason, the above line does not compile on MSVC, even though GCC compiles it without problems */
 				/* This might be a MSVC bug, there's no reason for it not to compile... Especially that GCC doesn't complain at all */
-				/* Here's an horribly ugly workaround: */
+				/* Here's a horribly ugly workaround: */
 				auto size = std::ssize(callbacks);
 				auto current = std::begin(callbacks);
 				for (int i = 0; i < size; ++i, ++current) (*current)(std::forward<decltype(_event)>(_event));

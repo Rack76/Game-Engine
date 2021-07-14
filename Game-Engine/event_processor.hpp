@@ -18,8 +18,8 @@ namespace Engine {
 	public:
 		/* Inherited from Event_emitter: 
 		
-		   Event_handle add_callback();
-		   void remove_callback(Event_handle);
+		   Callback_handle add_callback();
+		   void remove_callback(Callback_handle);
 		*/
 
 		void process_events();
