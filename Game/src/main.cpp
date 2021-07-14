@@ -8,12 +8,6 @@
 #undef main
 
 int main() {
-	std::vector<int> v;
-	std::list<int> l;
-	for(auto const& e : v | std::views::take(5)) {} //This compiles
-	//for(auto const& e : l | std::views::all | std::views::take(5)) {} //This does not
-	//std::cout << std::ranges::viewable_range<decltype(l)&>;
-	
 	using namespace Engine;
 	using enum Engine::Renderer_2d::Primitive;
 
