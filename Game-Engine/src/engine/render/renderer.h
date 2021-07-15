@@ -1,4 +1,4 @@
-#ifndef ENGINE_RENDER_RENDERER_H
+/*#ifndef ENGINE_RENDER_RENDERER_H
 #define ENGINE_RENDER_RENDERER_H
 
 #include <cstdint>
@@ -39,3 +39,4 @@ namespace engine
 };
 
 #endif
+*/

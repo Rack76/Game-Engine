@@ -16,38 +16,32 @@
     <ClInclude Include="src\ecs\Components\State2D.h" />
     <ClInclude Include="src\ecs\ECS_Types.h" />
     <ClInclude Include="src\ecs\Entity.h" />
-    <ClInclude Include="src\engine\ecs\BitMask.h" />
-    <ClInclude Include="src\engine\ecs\Component.h" />
-    <ClInclude Include="src\engine\ecs\Components\State2D.h" />
-    <ClInclude Include="src\engine\ecs\ECS_Types.h" />
-    <ClInclude Include="src\engine\ecs\Entity.h" />
-    <ClInclude Include="src\engine\ecs\Event.h" />
-    <ClInclude Include="src\engine\ecs\System.h" />
-    <ClInclude Include="src\engine\ecs\SystemManager.h" />
+    <ClInclude Include="src\ecs\Event.h" />
+    <ClInclude Include="src\ecs\System.h" />
+    <ClInclude Include="src\ecs\SystemManager.h" />
     <ClInclude Include="src\engine\engine.h" />
     <ClInclude Include="src\engine\eventloop.h" />
     <ClInclude Include="src\engine\events.h" />
-    <ClInclude Include="src\engine\events\events.h" />
-    <ClInclude Include="src\engine\math\Math.h" />
-    <ClInclude Include="src\engine\math\MathConfig.h" />
+    <ClInclude Include="src\math\Math.h" />
+    <ClInclude Include="src\math\MathConfig.h" />
+    <ClInclude Include="src\engine\renderer.h" />
     <ClInclude Include="src\engine\render\renderer.h" />
     <ClInclude Include="src\engine\userfunctions.h" />
-    <ClInclude Include="src\engine\window\window.h" />
+    <ClInclude Include="src\engine\window.h" />
     <ClInclude Include="src\ph\game.h" />
     <ClInclude Include="src\render\renderer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\engine\ecs\BitMask.cpp" />
-    <ClCompile Include="src\engine\ecs\Components\State2D.cpp" />
-    <ClCompile Include="src\engine\ecs\Entity.cpp" />
-    <ClCompile Include="src\engine\ecs\Event.cpp" />
-    <ClCompile Include="src\engine\ecs\System.cpp" />
+    <ClCompile Include="src\ecs\BitMask.cpp" />
+    <ClCompile Include="src\ecs\Components\State2D.cpp" />
+    <ClCompile Include="src\ecs\Entity.cpp" />
+    <ClCompile Include="src\ecs\Event.cpp" />
+    <ClCompile Include="src\ecs\System.cpp" />
     <ClCompile Include="src\engine\engine.cpp" />
     <ClCompile Include="src\engine\eventloop.cpp" />
-    <ClCompile Include="src\engine\events\events.cpp" />
     <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
     <ClCompile Include="src\engine\userfunctions.cpp" />
-    <ClCompile Include="src\engine\window\sdl\window-sdl.cpp" />
+    <ClCompile Include="src\engine\window.cpp" />
     <ClCompile Include="src\ph\game.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +99,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

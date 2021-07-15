@@ -1,14 +1,4 @@
-#include "../renderer.h"
-
-#include <SDL_render.h>
-
-#include "../../../engine/window/window.h"
-
-namespace
-{
-	SDL_Renderer* renderer;
-}
-
+/*
 namespace engine
 {
 	namespace render
@@ -55,3 +45,4 @@ namespace engine
 		}
 	}
 }
+*/
