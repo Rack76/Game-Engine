@@ -34,6 +34,14 @@ SDL_Renderer* ge::Application::GetRenderer() {
 	return ge::renderer::renderer;
 }
 
+SDL_Window* ge::Application::GetWindow() {
+	return ge::window::window;
+}
+
 void ge::Application::onEveryTick(int order, void(*func)(void)) {
 	ge::userFunctions::addFunction(func, order);
+}
+
+void ge::Application::setTitle(std::string title) {
+	ge::window::SetTitle(title.c_str());
 }

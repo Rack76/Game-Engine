@@ -4,8 +4,6 @@
 #include <cstdlib>
 
 namespace ge::window {
-	SDL_Window* window;
-
 	void atExit() {
 		if (ge::renderer::renderer) SDL_DestroyRenderer(ge::renderer::renderer);
 		if (window) SDL_DestroyWindow(window);
@@ -26,6 +24,9 @@ namespace ge::window {
 
 	bool Init() {
 		return ge::window::Init("", 1280, 720);
+	}
+	void SetTitle(const char* title) {
+		SDL_SetWindowTitle(window, title);
 	}
 }
 

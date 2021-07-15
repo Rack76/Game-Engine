@@ -25,7 +25,6 @@
     <ClInclude Include="src\math\Math.h" />
     <ClInclude Include="src\math\MathConfig.h" />
     <ClInclude Include="src\engine\renderer.h" />
-    <ClInclude Include="src\engine\render\renderer.h" />
     <ClInclude Include="src\engine\userfunctions.h" />
     <ClInclude Include="src\engine\window.h" />
     <ClInclude Include="src\ph\game.h" />
@@ -39,7 +38,6 @@
     <ClCompile Include="src\ecs\System.cpp" />
     <ClCompile Include="src\engine\engine.cpp" />
     <ClCompile Include="src\engine\eventloop.cpp" />
-    <ClCompile Include="src\engine\render\sdl\renderer-sdl.cpp" />
     <ClCompile Include="src\engine\userfunctions.cpp" />
     <ClCompile Include="src\engine\window.cpp" />
     <ClCompile Include="src\ph\game.cpp" />

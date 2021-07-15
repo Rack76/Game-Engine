@@ -30,7 +30,7 @@ int main(int argc, char* args[])
 		}
 		SDL_RenderPresent(r);
 		});
-
+	app.setTitle("abc");
 	app.Run();
 	return 0;
 }
