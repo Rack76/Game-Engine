@@ -12,7 +12,11 @@ ge::Application::Application() {
 	std::exit(0);
 }
 
-ge::Application::~Application() {}
+ge::Application::~Application() {
+	if (ge::window::window) SDL_DestroyWindow(ge::window::window);
+	if (ge::renderer::renderer) SDL_DestroyRenderer(ge::renderer::renderer);
+	SDL_Quit();
+}
 
 void ge::Application::Run() {
 	ge::engine::Run();
